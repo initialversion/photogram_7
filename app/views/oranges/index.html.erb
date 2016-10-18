@@ -16,7 +16,7 @@
 
       <% @oranges.each do |orange| %>
       <tr>
-        <td><%= orange.vote_id %></td>
+        <td><%= orange.vote.created_at %></td>
         <td><%= orange.orange_name %></td>
         <td>
           <a href="/oranges/<%= orange.id %>" class="btn btn-primary">Show</a>
