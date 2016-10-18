@@ -16,7 +16,7 @@
 
       <% @apples.each do |apple| %>
       <tr>
-        <td><%= apple.vote_id %></td>
+        <td><%= apple.vote.created_at %></td>
         <td><%= apple.apple_name %></td>
         <td>
           <a href="/apples/<%= apple.id %>" class="btn btn-primary">Show</a>
