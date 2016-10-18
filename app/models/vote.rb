@@ -5,6 +5,8 @@ class Vote < ApplicationRecord
 
   # Validations
 
+  validates :photo_id, :presence => true
+
   validates :voter_id, :presence => true
 
 end
