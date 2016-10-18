@@ -26,3 +26,43 @@
     </div>
   </div>
 </div>
+
+<!-- A Vote has many apples -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Apples
+      </li>
+
+      <% @vote.apples.each do |apple| %>
+        <li class="list-group-item">
+          <a href="/apples/<%= apple.id %>">
+            <%= apple.created_at %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<!-- A Vote has many oranges -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Oranges
+      </li>
+
+      <% @vote.oranges.each do |orange| %>
+        <li class="list-group-item">
+          <a href="/oranges/<%= orange.id %>">
+            <%= orange.created_at %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
