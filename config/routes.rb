@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+  # Routes for the Orange resource:
+  # CREATE
+  get "/oranges/new", :controller => "oranges", :action => "new"
+  post "/create_orange", :controller => "oranges", :action => "create"
+
+  # READ
+  get "/oranges", :controller => "oranges", :action => "index"
+  get "/oranges/:id", :controller => "oranges", :action => "show"
+
+  # UPDATE
+  get "/oranges/:id/edit", :controller => "oranges", :action => "edit"
+  post "/update_orange/:id", :controller => "oranges", :action => "update"
+
+  # DELETE
+  get "/delete_orange/:id", :controller => "oranges", :action => "destroy"
+  #------------------------------
+
   # Routes for the Apple resource:
   # CREATE
   get "/apples/new", :controller => "apples", :action => "new"
