@@ -43,6 +43,29 @@
           </a>
         </li>
       <% end %>
+
+      <li class="list-group-item">
+        <form action="/create_apple" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for vote_id -->
+      <input type="hidden" name="vote_id" value="<%= @vote.id %>">
+
+      <!-- Label and input for apple_name -->
+      <div class="form-group">
+        <label for="apple_name" class="control-label">
+          Apple name
+        </label>
+
+        <input type="text" id="apple_name" name="apple_name" placeholder="Apple name" class="form-control" value="">
+      </div>
+
+      <button class="btn btn-block btn-success">
+        Create Apple
+      </button>
+    </form>
+      </li>
     </ul>
   </div>
 </div>
@@ -63,6 +86,29 @@
           </a>
         </li>
       <% end %>
+
+      <li class="list-group-item">
+        <form action="/create_orange" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for vote_id -->
+      <input type="hidden" name="vote_id" value="<%= @vote.id %>">
+
+      <!-- Label and input for orange_name -->
+      <div class="form-group">
+        <label for="orange_name" class="control-label">
+          Orange name
+        </label>
+
+        <input type="text" id="orange_name" name="orange_name" placeholder="Orange name" class="form-control" value="">
+      </div>
+
+      <button class="btn btn-block btn-success">
+        Create Orange
+      </button>
+    </form>
+      </li>
     </ul>
   </div>
 </div>
