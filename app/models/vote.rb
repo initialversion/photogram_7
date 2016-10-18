@@ -1,6 +1,9 @@
 class Vote < ApplicationRecord
   # Direct associations
 
+  has_many   :apples,
+             :dependent => :destroy
+
   belongs_to :photo,
              :counter_cache => :likes_count
 
