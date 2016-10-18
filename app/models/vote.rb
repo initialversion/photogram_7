@@ -1,6 +1,9 @@
 class Vote < ApplicationRecord
   # Direct associations
 
+  has_many   :oranges,
+             :dependent => :destroy
+
   has_many   :apples,
              :dependent => :destroy
 
