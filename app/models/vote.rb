@@ -5,4 +5,6 @@ class Vote < ApplicationRecord
 
   # Validations
 
+  validates :voter_id, :presence => true
+
 end
