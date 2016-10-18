@@ -24,7 +24,7 @@
           Vote
         </label>
 
-        <input type="text" id="vote_id" name="vote_id" placeholder="Vote" class="form-control" value="<%= @apple.vote_id %>">
+        <%= select_tag(:vote_id, options_from_collection_for_select(Vote.all, :id, :created_at, @apple.vote_id), :class => "form-control") %>
       </div>
 
       <!-- Label and input for apple_name -->
